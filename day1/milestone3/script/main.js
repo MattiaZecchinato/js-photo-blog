@@ -2,6 +2,7 @@
 const cardContainerElement = document.querySelector('.card-container');
 console.log(cardContainerElement);
 
+// get element error-msg
 const errorMessageElement = document.getElementById('error-msg');
 console.log(errorMessageElement);
 
@@ -40,6 +41,7 @@ axios.get(uri).then(response => {
     const errorStatus = error.response.status;
     console.log(errorStatus);
 
+    // remove the class hidden-element
     errorMessageElement.classList.remove('hidden-element');
 
     // add into error-msg the message with the error
