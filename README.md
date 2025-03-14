@@ -2,7 +2,7 @@
 
 ## Day 1
 
-![day1 desktop](img-readme/day1-desktop.png)
+![day1 desktop](img-readme/day1/day1-desktop.png)
 
 ### Milestone 1
 - Through the attached screenshots we reproduce the graphics statically: using only HTML and CSS and reproducing a single photograph.
