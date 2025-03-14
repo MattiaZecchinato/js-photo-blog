@@ -31,6 +31,11 @@ body {
     background-image: url(/img/cork.png);
 }
 
+.hidden-element {
+
+    display: none;
+}
+
 /* card */
 .card {
 
@@ -103,4 +108,13 @@ main
     gap: 30px;
     padding: 50px 200px;
     justify-content: center;
+}
+
+/* error message */
+#error-msg {
+
+    font-size: 40px;
+    background-color: #cf2f13;
+    padding: 20px;
+    border-radius: 15px;
 }
