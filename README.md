@@ -2,12 +2,14 @@
 
 ## Day 1
 
+Prototype for day 1
+
 ![day1 desktop](img-readme/day1/day1-desktop.png)
 
 ### Milestone 1
 - Through the attached screenshots we reproduce the graphics statically: using only HTML and CSS and reproducing a single photograph.
 
-![day1 desktop](img-readme/day1/milestone1/day1-mileston1.png)
+![milestone1](img-readme/day1/milestone1/day1-mileston1.png)
 
 ### Milestone 2
 
@@ -47,6 +49,12 @@ https://lanciweb.github.io/demo/api/pictures/
         ...
     ]
 ```
+
+### Milestone 3
+
+- We create a JavaScript sheet and make an AJAX call to the API, exploiting the response to dynamically generate a series of pictures on the page!
+
+![milestone3](img-readme/day1/milestone3/day1-mileston3.png)
 
 ## Languages Used
 
