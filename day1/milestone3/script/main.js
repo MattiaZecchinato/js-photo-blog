@@ -1,7 +1,9 @@
 // get element card-container
 const cardContainerElement = document.querySelector('.card-container');
-
 console.log(cardContainerElement);
+
+const errorMessageElement = document.getElementById('error-msg');
+console.log(errorMessageElement);
 
 // name of the server we wanna reach
 const uri = 'https://lanciweb.github.io/demo/api/pictures/';
@@ -34,7 +36,14 @@ axios.get(uri).then(response => {
 
 }).catch(error => {
 
-    console.error(error);
+    // get the status(number error) of the response
+    const errorStatus = error.response.status;
+    console.log(errorStatus);
+
+    errorMessageElement.classList.remove('hidden-element');
+
+    // add into error-msg the message with the error
+    errorMessageElement.innerHTML = `Error ${errorStatus}`;
 })
 
 
