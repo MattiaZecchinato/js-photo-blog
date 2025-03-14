@@ -7,7 +7,6 @@ fonts
 /* font-family: ‘Edu Tas Beginner’, sans-serif; */
 
 
-
 /******* 
 reset 
 *******/
@@ -19,3 +18,21 @@ reset
     box-sizing: border-box;
 }
 
+/******* 
+header 
+*******/
+
+/* title */
+h1 {
+
+    font-family: "Edu Tas Beginner", sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 60px;
+}
+
+.title-box {
+
+    background-image: url(/img/wall.png);
+    padding: 30px;
+}
