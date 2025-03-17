@@ -74,6 +74,14 @@ Image with hover effect
 
 ![day2 milestone1](img-readme/day2/milestone1/day2-mileston1.png)
 
+### Milestone 2
+
+- We make the overlay disappear with the help of a CSS class that sets the display: none .
+After that, let's make it so that by clicking any photo, the overlay reappears.
+By clicking the close button instead, the overlay disappears again.
+
+![day2 milestone2](img-readme/day2/milestone2/day2-milestone2.gif)
+
 ---
 
 ## Languages Used
