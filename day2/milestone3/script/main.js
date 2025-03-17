@@ -73,7 +73,13 @@ axios.get(uri).then(response => {
             boxOverlayElement.classList.remove('hidden-element');
 
             // get element image card
-            const idImgCardElement = document.querySelector(`img#${card.id}`);
+            let prova = `img#${card.id}`;
+            console.log(`Prova base: ${prova}`);
+            // CSS.escape is for deleted unwanted special characters
+            prova = `img#${CSS.escape(card.id)}`;
+            console.log(`Prova escape: ${prova}`);
+
+            const idImgCardElement = document.querySelector(`img#${CSS.escape(card.id)}`);
             console.log(idImgCardElement);
 
             //add image inside box-overlay element
