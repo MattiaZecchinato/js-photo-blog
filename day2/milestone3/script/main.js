@@ -15,7 +15,13 @@ const buttonCloseElement = document.getElementById('btn-close');
 console.log(buttonCloseElement);
 
 // when click on btn-close add class hidden-element to box-overlay
-buttonCloseElement.addEventListener('click', () => boxOverlayElement.classList.add('hidden-element'));
+buttonCloseElement.addEventListener('click', () => {
+    
+    boxOverlayElement.classList.add('hidden-element');
+    bodyElement.classList.remove('block-scroll');
+});
+
+const bodyElement = document.querySelector('body');
 
 /******* 
 load image for card 
@@ -72,6 +78,7 @@ axios.get(uri).then(response => {
 
             // remove class hidden-element to box-overlay
             boxOverlayElement.classList.remove('hidden-element');
+            bodyElement.classList.add('block-scroll');
 
             // // get element image card
             // let prova = `img#${card.id}`;
