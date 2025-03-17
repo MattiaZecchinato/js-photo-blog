@@ -23,6 +23,18 @@ reset
 }
 
 /******* 
+hover 
+*******/
+
+.card:hover {
+
+    cursor: pointer;
+
+    transform: scale(1.10,1.10) rotate(10deg);
+    z-index: 1;
+}
+
+/******* 
 common 
 *******/
 
@@ -44,12 +56,19 @@ body {
     padding: 15px;
     position: relative;
     box-shadow: 5px 5px 30px;
+    transition: 0.5s;
 }
 
 .card p {
 
+    font-family: "Sometype Mono", monospace;
+    margin-bottom: 5px;
+}
+
+.card h2 {
+
     font-family: "Edu Tas Beginner", sans-serif;
-    margin-bottom: 10px;
+    text-transform: uppercase;
 }
 
 .container-image {
