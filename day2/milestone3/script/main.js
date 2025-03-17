@@ -6,10 +6,15 @@ overlay
 const boxOverlayElement = document.querySelector('.box-overlay');
 console.log(boxOverlayElement);
 
+// get element box-overlay-img
+const boxOverlayImgElement = document.querySelector('.box-overlay-img');
+console.log(boxOverlayImgElement);
+
 // get element btn-close
 const buttonCloseElement = document.getElementById('btn-close');
 console.log(buttonCloseElement);
 
+// when click on btn-close add class hidden-element to box-overlay
 buttonCloseElement.addEventListener('click', () => boxOverlayElement.classList.add('hidden-element'));
 
 /******* 
@@ -41,10 +46,10 @@ axios.get(uri).then(response => {
         // add into card-container the card with the data of current picture
         cardContainerElement.innerHTML += `
             <!-- card -->
-            <div class="card">
+            <div class="card" id="${element.id}">
                 <!-- card image -->
                 <div class="container-image">
-                    <img src="${element.url}" alt="${element.title}">
+                    <img src="${element.url}" alt="${element.title}" id="${element.id}">
                 </div>
                 <!-- card description -->
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
@@ -60,7 +65,20 @@ axios.get(uri).then(response => {
     // add for each element with class card a function on click
     cardElement.forEach(card => {
 
-        card.addEventListener('click', () => boxOverlayElement.classList.remove('hidden-element'));
+        console.log(`card id: ${card.id}`);
+
+        card.addEventListener('click', () => {
+
+            // remove class hidden-element to box-overlay
+            boxOverlayElement.classList.remove('hidden-element');
+
+            // get element image card
+            const idImgCardElement = document.querySelector(`img#${card.id}`);
+            console.log(idImgCardElement);
+
+            //add image inside box-overlay element
+            boxOverlayImgElement.innerHTML = `<img src="${idImgCardElement.src}" alt="${idImgCardElement.alt}">`;
+        });
     });
 
 }).catch(error => {
