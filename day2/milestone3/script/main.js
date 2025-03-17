@@ -46,10 +46,10 @@ axios.get(uri).then(response => {
         // add into card-container the card with the data of current picture
         cardContainerElement.innerHTML += `
             <!-- card -->
-            <div class="card" id="${element.id}">
+            <div class="card">
                 <!-- card image -->
                 <div class="container-image">
-                    <img src="${element.url}" alt="${element.title}" id="${element.id}">
+                    <img src="${element.url}" alt="${element.title}">
                 </div>
                 <!-- card description -->
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
@@ -65,25 +65,26 @@ axios.get(uri).then(response => {
     // add for each element with class card a function on click
     cardElement.forEach(card => {
 
-        console.log(`card id: ${card.id}`);
+        // console.log(`card id: ${card.id}`);
 
         card.addEventListener('click', () => {
 
             // remove class hidden-element to box-overlay
             boxOverlayElement.classList.remove('hidden-element');
 
-            // get element image card
-            let prova = `img#${card.id}`;
-            console.log(`Prova base: ${prova}`);
-            // CSS.escape is for deleted unwanted special characters
-            prova = `img#${CSS.escape(card.id)}`;
-            console.log(`Prova escape: ${prova}`);
+            // // get element image card
+            // let prova = `img#${card.id}`;
+            // console.log(`Prova base: ${prova}`);
+            // // CSS.escape is for delete unwanted special characters
+            // prova = `img#${CSS.escape(card.id)}`;
+            // console.log(`Prova escape: ${prova}`);
+            // const idImgCardElement = document.getElementById(`img${card.id}`);
 
-            const idImgCardElement = document.querySelector(`img#${CSS.escape(card.id)}`);
-            console.log(idImgCardElement);
+            const currentCardImgElement = card.querySelector('.container-image img');
+            console.log(currentCardImgElement);
 
             //add image inside box-overlay element
-            boxOverlayImgElement.innerHTML = `<img src="${idImgCardElement.src}" alt="${idImgCardElement.alt}">`;
+            boxOverlayImgElement.innerHTML = `<img src="${currentCardImgElement.src}" alt="${currentCardImgElement.alt}">`;
         });
     });
 
