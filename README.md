@@ -9,7 +9,7 @@ Prototype for day 1
 ### Milestone 1
 - Through the attached screenshots we reproduce the graphics statically: using only HTML and CSS and reproducing a single photograph.
 
-![milestone1](img-readme/day1/milestone1/day1-mileston1.png)
+![day1 milestone1](img-readme/day1/milestone1/day1-mileston1.png)
 
 ### Milestone 2
 
@@ -54,13 +54,35 @@ https://lanciweb.github.io/demo/api/pictures/
 
 - We create a JavaScript sheet and make an AJAX call to the API, exploiting the response to dynamically generate a series of pictures on the page!
 
-![milestone3](img-readme/day1/milestone3/day1-mileston3.png)
+![day1 milestone3](img-readme/day1/milestone3/day1-mileston3.png)
+
+---
+
+## Day 2
+
+Prototype for day 2
+
+When click on the card
+![day1 overlay](img-readme/day2/day2-overlay.png)
+
+Image with hover effect
+![day1 hover image](img-readme/day2/day2-hover-img.png)
+
+### Milestone 1
+
+- We create an overlay that covers the entire page and inside, centered, we place any image and a close button.
+
+![day2 milestone1](img-readme/day2/milestone1/day2-mileston1.png)
+
+---
 
 ## Languages Used
 
 ![Static Badge](https://img.shields.io/badge/HTML-orange)
 ![Static Badge](https://img.shields.io/badge/CSS-purple)
 ![Static Badge](https://img.shields.io/badge/JavaScript-yellow)
+
+---
 
 ## Authors
 
