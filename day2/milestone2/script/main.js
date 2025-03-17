@@ -1,4 +1,18 @@
 /******* 
+overlay 
+*******/
+
+// get element box-overlay
+const boxOverlayElement = document.querySelector('.box-overlay');
+console.log(boxOverlayElement);
+
+// get element btn-close
+const buttonCloseElement = document.getElementById('btn-close');
+console.log(buttonCloseElement);
+
+buttonCloseElement.addEventListener('click', () => boxOverlayElement.classList.add('hidden-element'));
+
+/******* 
 load image for card 
 *******/
 
@@ -39,6 +53,16 @@ axios.get(uri).then(response => {
             </div>`;
     });
 
+    // get element card
+    const cardElement = document.querySelectorAll('.card');
+    console.log(cardElement);
+
+    // add for each element with class card a function on click
+    cardElement.forEach(card => {
+
+        card.addEventListener('click', () => boxOverlayElement.classList.remove('hidden-element'));
+    });
+
 }).catch(error => {
 
     // get the status(number error) of the response
@@ -65,27 +89,3 @@ axios.get(uri).then(response => {
     <!-- card pin image -->
     <img src="/img/pin.svg" alt="pin" class="pin-card">
 </div>*/
-
-/******* 
-overlay 
-*******/
-
-// get element box-overlay
-const boxOverlayElement = document.querySelector('.box-overlay');
-console.log(boxOverlayElement);
-
-// get element card
-const cardElement = document.querySelectorAll('.card');
-console.log('Card element:');
-console.log(cardElement);
-
-// get element btn-close
-const buttonCloseElement = document.getElementById('btn-close');
-console.log(buttonCloseElement);
-
-boxOverlayElement.classList.add('hidden-element');
-
-cardElement.addEventListener('click', function() {
-
-    console.log('card clicccata');
-});
