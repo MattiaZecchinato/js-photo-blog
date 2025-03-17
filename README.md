@@ -82,6 +82,12 @@ By clicking the close button instead, the overlay disappears again.
 
 ![day2 milestone2](img-readme/day2/milestone2/day2-milestone2.gif)
 
+### Milestone 3
+
+- When a photo is clicked, we need to make sure that it is that photo that is shown within the overlay.
+
+![day2 milestone3](img-readme/day2/milestone3/day2-milestone3.gif)
+
 ---
 
 ## Languages Used
