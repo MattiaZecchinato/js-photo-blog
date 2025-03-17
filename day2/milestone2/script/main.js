@@ -1,3 +1,7 @@
+/******* 
+load image for card 
+*******/
+
 // get element card-container
 const cardContainerElement = document.querySelector('.card-container');
 console.log(cardContainerElement);
@@ -61,3 +65,27 @@ axios.get(uri).then(response => {
     <!-- card pin image -->
     <img src="/img/pin.svg" alt="pin" class="pin-card">
 </div>*/
+
+/******* 
+overlay 
+*******/
+
+// get element box-overlay
+const boxOverlayElement = document.querySelector('.box-overlay');
+console.log(boxOverlayElement);
+
+// get element card
+const cardElement = document.querySelectorAll('.card');
+console.log('Card element:');
+console.log(cardElement);
+
+// get element btn-close
+const buttonCloseElement = document.getElementById('btn-close');
+console.log(buttonCloseElement);
+
+boxOverlayElement.classList.add('hidden-element');
+
+cardElement.addEventListener('click', function() {
+
+    console.log('card clicccata');
+});
