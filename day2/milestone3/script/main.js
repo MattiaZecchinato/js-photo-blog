@@ -52,7 +52,8 @@ axios.get(uri).then(response => {
                     <img src="${element.url}" alt="${element.title}">
                 </div>
                 <!-- card description -->
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                <p>${element.date}</p>
+                <h2>${element.title}</h2>
                 <!-- card pin image -->
                 <img src="/img/pin.svg" alt="pin" class="pin-card">
             </div>`;
@@ -80,13 +81,24 @@ axios.get(uri).then(response => {
             // console.log(`Prova escape: ${prova}`);
             // const idImgCardElement = document.getElementById(`img${card.id}`);
 
+            // get current image
             const currentCardImgElement = card.querySelector('.container-image img');
             console.log(currentCardImgElement);
 
             //add image inside box-overlay element
             boxOverlayImgElement.innerHTML = `<img src="${currentCardImgElement.src}" alt="${currentCardImgElement.alt}">`;
         });
+
+        const pinCardElement = card.querySelector('.pin-card');
+
+        // add class hidden-element when mouse over card element
+        card.addEventListener('mouseover', () => pinCardElement.classList.add('hidden-element'));
+
+        // add class hidden-element when mouse out card element
+        card.addEventListener('mouseout', () => pinCardElement.classList.remove('hidden-element'));
     });
+
+
 
 }).catch(error => {
 
