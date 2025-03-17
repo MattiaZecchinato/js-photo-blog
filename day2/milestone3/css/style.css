@@ -29,9 +29,13 @@ hover
 .card:hover {
 
     cursor: pointer;
-
     transform: scale(1.10,1.10) rotate(10deg);
     z-index: 1;
+}
+
+#btn-close:hover {
+
+    cursor: pointer;
 }
 
 /******* 
@@ -48,11 +52,15 @@ body {
     display: none !important;
 }
 
+.block-scroll {
+
+    overflow: hidden;
+}
+
 /* card */
 .card {
 
     background-color: #fff;
-    width: 300px;
     padding: 15px;
     position: relative;
     box-shadow: 5px 5px 30px;
@@ -124,7 +132,7 @@ main
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
-    padding: 50px 200px 0;
+    padding: 50px 400px 0;
     justify-content: center;
 }
 
@@ -146,7 +154,7 @@ overlay
     height: 100%;
     width: 100%;
     background-color: rgba(76, 75, 75, 0.7);
-    position: absolute;
+    position: fixed;
     z-index: 2;
     display: flex;
     flex-direction: column;
