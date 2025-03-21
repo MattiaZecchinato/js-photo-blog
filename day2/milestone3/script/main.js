@@ -14,14 +14,14 @@ console.log(boxOverlayImgElement);
 const buttonCloseElement = document.getElementById('btn-close');
 console.log(buttonCloseElement);
 
+const bodyElement = document.querySelector('body');
+
 // when click on btn-close add class hidden-element to box-overlay
 buttonCloseElement.addEventListener('click', () => {
     
     boxOverlayElement.classList.add('hidden-element');
     bodyElement.classList.remove('block-scroll');
 });
-
-const bodyElement = document.querySelector('body');
 
 /******* 
 load image for card 
@@ -104,8 +104,6 @@ axios.get(uri).then(response => {
         // add class hidden-element when mouse out card element
         card.addEventListener('mouseout', () => pinCardElement.classList.remove('hidden-element'));
     });
-
-
 
 }).catch(error => {
 
