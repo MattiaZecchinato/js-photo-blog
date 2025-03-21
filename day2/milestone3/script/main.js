@@ -80,14 +80,6 @@ axios.get(uri).then(response => {
             boxOverlayElement.classList.remove('hidden-element');
             bodyElement.classList.add('block-scroll');
 
-            // // get element image card
-            // let prova = `img#${card.id}`;
-            // console.log(`Prova base: ${prova}`);
-            // // CSS.escape is for delete unwanted special characters
-            // prova = `img#${CSS.escape(card.id)}`;
-            // console.log(`Prova escape: ${prova}`);
-            // const idImgCardElement = document.getElementById(`img${card.id}`);
-
             // get current image
             const currentCardImgElement = card.querySelector('.container-image img');
             console.log(currentCardImgElement);
